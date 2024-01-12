@@ -14,4 +14,6 @@ do
     export SO_ContainerUserName=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $4}'
     export SO_ContainerPassword=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $5}'
     export SO_ConntainerSSHPort=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $6}'
+
+    sh "$SO_MouleDirectory"/"$SilentOpsModuleName".sh
 done

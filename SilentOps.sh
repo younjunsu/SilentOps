@@ -1,7 +1,7 @@
 #!/bin/bash
 #############################################################################
-SO_HomeDirectory="/root/SilentOps"
-SO_ScriptDirectory="$SilentOpsHomeDirectory/Scripts"
+export SO_HomeDirectory="/root/SilentOps"
+export SO_ScriptDirectory="$SilentOpsHomeDirectory/Scripts"
 
 
 #############################################################################

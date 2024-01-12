@@ -1,6 +1,6 @@
 #!/bin/bash
 #############################################################################
-SO_ContainerListFile="$SlientOpsHomeDirectory/SilentOps.cfg"
+export SO_ContainerListFile="$SlientOpsHomeDirectory/SilentOps.cfg"
 
 
 #############################################################################

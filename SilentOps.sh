@@ -1,12 +1,18 @@
 #!/bin/bash
+#############################################################################
+SO_HomeDirectory="/root/SilentOps"
+SO_ScriptDirectory="$SilentOpsHomeDirectory/Scripts"
+
+
+#############################################################################
 clear
 echo " # SilentOps Tool (by. junsuyoun)"
 echo " ----------------------------------------------------------------------"
-SilentOpsHelloMessage="  A tool that enhances user convenience in a containerized environment."
+SO_HelloMessage="  A tool that enhances user convenience in a containerized environment."
 
-for ((i=0; i<${#SilentOpsHelloMessage}; i++)); do
+for ((i=0; i<${#SO_HelloMessage}; i++)); do
     #red=$((RANDOM % 256));green=$((RANDOM % 256));blue=$((RANDOM % 256))
-    printf "\033[38;2;%d;%d;%dm\033[48;5;0m%s\033[0m" "$red" "$green" "$blue" "${SilentOpsHelloMessage:$i:1}"
+    printf "\033[38;2;%d;%d;%dm\033[48;5;0m%s\033[0m" "$red" "$green" "$blue" "${SO_HelloMessage:$i:1}"
     sleep 0.02
 done
 

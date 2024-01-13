@@ -7,6 +7,7 @@ export SO_ComponetDirectory="$SO_ScriptDirectory/Components"
 
 
 #############################################################################
+
 clear
 echo " # SilentOps Tool (by. junsuyoun)"
 echo " ----------------------------------------------------------------------"

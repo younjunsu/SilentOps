@@ -6,7 +6,7 @@
 # $5:   Password
 # $6:   SSH Port (defualt 22)
 
-for SO_ContainerVar in "${$SO_ConntainerListArray}"
+for SO_ContainerVar in "${SO_ConntainerListArray[@]}"
 do
     export SO_ContainerType=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $1}'
     export SO_ContainerName=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $2}'

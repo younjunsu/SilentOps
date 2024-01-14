@@ -4,7 +4,7 @@ export SO_HomeDirectory="/root/SilentOps"
 export SO_ScriptDirectory="$SO_HomeDirectory/Scripts"
 export SO_MouleDirectory="$SO_ScriptDirectory/Modules"
 export SO_ComponetDirectory="$SO_ScriptDirectory/Components"
-
+export 
 
 #############################################################################
 
@@ -47,7 +47,6 @@ echo ""
 echo "  # Using SilentOps Batch Mode"
 echo " ----------------------------------------------------------------------"
 echo "      $ ./SilentOps	--batch	%mode	%type	%sec"	
-
 
 
 sh $SO_ComponetDirectory/SO_C_ContainerListView.sh

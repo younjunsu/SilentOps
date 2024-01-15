@@ -9,10 +9,10 @@ function fn_ping(){
     so_alive_ping=`timeout 0.1 ping "$so_cont_ip"`
     if [ -n "$so_alive_ping" ]
     then
-        so_alive_ping_message="O"
+        export so_alive_ping_message="O"
     elif [ -z "$so_alive_ping" ]
     then
-        so_alive_ping_message="X"
+        export so_alive_ping_message="X"
     fi
 }
 
@@ -21,10 +21,10 @@ function fn_telnet(){
         
     if [ -n "$so_alive_sshport" ]
     then
-        so_alive_sshport_message="O"
-    elif
+        export so_alive_sshport_message="O"
+    elif [ -z "$so_alive_sshport" ]
     then
-        so_alive_sshport_message="X"
+        export so_alive_sshport_message="X"
     fi
 }
 

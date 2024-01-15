@@ -84,6 +84,8 @@ case "$option1" in
         sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;
     "stop")
         sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;  
+    "conn")
+        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;  
     *)
         # Message
         fn_message;;

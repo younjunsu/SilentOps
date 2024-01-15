@@ -82,9 +82,9 @@ case "$option1" in
         # ListView
         sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;
     "start")
-        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;;;
+        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;
     "stop")
-        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;;;  
+        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;  
     *)
         # Message
         fn_message;;

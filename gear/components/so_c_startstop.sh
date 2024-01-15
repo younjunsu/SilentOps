@@ -9,4 +9,4 @@ option3=$3
 option4=$4
 option5=$5
 
-source "$so_mouledirectory"/so_m_startstopmeta.sh "$option1" "$option2"
+sh "$so_mouledirectory"/so_m_startstopmeta.sh "$option1" "$option2"

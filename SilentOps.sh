@@ -1,6 +1,6 @@
 #!/bin/bash
 #############################################################################
-export so_homedirectory="/root/silentops"
+export so_homedirectory="/root/SilentOps"
 export so_containerlistfile="$so_homedirectory/silentops.cfg"
 export so_componetdirectory="$so_homedirectory/gear/components"
 export so_mouledirectory="$so_homedirectory/gear/modules"

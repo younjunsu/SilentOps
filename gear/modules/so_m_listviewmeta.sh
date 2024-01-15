@@ -4,6 +4,7 @@
 
 #############################################################################
 option1=$1
+option2=$2
 
 sh "$so_scriptdirectory"/so_s_listselecttype.sh "$option1"
 for 

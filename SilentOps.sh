@@ -73,7 +73,7 @@ case "$option1" in
         fn_environment;;
     "listview")
         # ListView
-        sh $SO_ComponetDirectory/SO_C_ContainerListView.sh ;;
+        sh $so_componetdirectory/so_c_listview.sh $option2;;
     *)
         # Message
         fn_message;;

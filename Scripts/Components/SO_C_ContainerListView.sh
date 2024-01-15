@@ -1,20 +1,14 @@
 #!/bin/bash
 #############################################################################
-export SO_HomeDirectory="/root/SilentOps"
-export SO_ScriptDirectory="$SO_HomeDirectory/Scripts"
-export SO_MouleDirectory="$SO_ScriptDirectory/Modules"
-export SO_ComponetDirectory="$SO_ScriptDirectory/Components"
-export SO_ContainerListFile="$SO_HomeDirectory/SilentOps.cfg"
+# script inheritance relationship 
+export so_compentname="so_c_containerlistview"
+export so_modulename="so_m_containerlistviewmeta"
 #############################################################################
 
-export SilentOpsCompentName="SO_C_ContainerListView"
-export SilentOpsModuleName="SO_M_ContainerListViewMeta"
-
 echo
-echo "  Container "
+echo "  container "
 echo " ----------------------------------------------------------------------"
-printf "%10s\t\t%10s\t\t%10s\t%10s \n" "Name" "IP" "Alive" "SSH(tcp22)"
+printf "%10s\t\t%10s\t\t%10s\t%10s \n" "name" "ip" "alive" "ssh(tcp22)"
 echo " ----------------------------------------------------------------------"
-sh "$SO_ScriptDirectory"/SO_ListSelectType.sh tibero
-export SO_ConntainerListArray=${SO_ConntainerListArray[@]}
-sh "$SO_ScriptDirectory"/SO_ListMeta.sh
+sh "$so_scriptdirectory"/so_listselecttype.sh tibero
+sh "$so_scriptdirectory"/so_listmeta.sh

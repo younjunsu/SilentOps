@@ -8,6 +8,12 @@ export SO_ModuleName="SO_M_ContainerListViewMeta"
 SO_AliveCheck=`timeout 0.1 ping "$SO_ContainerIP"`
 SO_SSHPortAlive=`timeout 0.1 telnet "$SO_ContainerIP" "$SO_ContainerSSHPort" 2>&1`
 SO_SSHPortCheck=`echo "$SO_SSHPortAlive" |grep "Escape"`
+
+
+
+
+
+
 if [ -n "$SO_AliveCheck" ]
 then
     SO_AliveMessage="O"

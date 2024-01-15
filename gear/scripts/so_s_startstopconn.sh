@@ -10,12 +10,12 @@ option5=$5
 
 
 function fn_start(){
-    sshpass -p '$so_docker_server_password' ssh $so_docker_server_user@$so_docker_server_ip "docker start $option2"
-    sshpass -p '$so_docker_server_password' ssh $so_docker_server_user@$so_docker_server_ip "docker exec -u 0 $option2 /usr/sbin/sshd"
+    sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker start $option2"
+    sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker exec -u 0 $option2 /usr/sbin/sshd"
 }
 
 function fn_stop(){
-    sshpass -p '$so_docker_server_password' ssh $so_docker_server_user@$so_docker_server_ip "docker stop $option2"
+    sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker stop $option2"
 }
 
 function fn_conn(){

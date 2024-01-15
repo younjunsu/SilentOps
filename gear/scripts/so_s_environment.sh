@@ -1,2 +1,2 @@
-
-../../silentops.sh
+#!/bin/bash
+../../silentops.sh environment

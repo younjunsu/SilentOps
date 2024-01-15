@@ -6,11 +6,11 @@ export so_componetdirectory="$so_homedirectory/gear/components"
 export so_mouledirectory="$so_homedirectory/gear/modules"
 export so_scriptdirectory="$so_homedirectory/gear/scripts"
 #############################################################################
-option1=$1
-option2=$2
-option3=$3
-option4=$4
-option5=$5
+option1_type=$1
+option2_componet1=$2
+option3_componet2=$3
+option4_componet3=$4
+option5_componet4=$5
 
 function fn_environment(){
     export so_homedirectory="$so_homedirectory"
@@ -64,7 +64,7 @@ function fn_message(){
 }
 
 
-case "$option1" in 
+case "$option1_type" in 
     "help")
         # Message
         fn_message;;
@@ -73,7 +73,7 @@ case "$option1" in
         fn_environment;;
     "listview")
         # ListView
-        sh "$so_componetdirectory"/so_c_listview.sh "$option1" "$option2";;
+        sh "$so_componetdirectory"/so_c_listview.sh "$option2_componet1" "$option3_componet2";;
     *)
         # Message
         fn_message;;

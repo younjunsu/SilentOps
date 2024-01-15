@@ -20,4 +20,4 @@ then
     SO_AliveMessage="X"
     SO_SSHPortMessage="X"
 fi
-printf "%10s\t\t%10s\t\t%10s\t%10s \n" "$SO_ContainerVar" "$SO_ContainerIP" "$SO_AliveMessage" "$SO_SSHPortMessage"
+printf "%10s\t\t%10s\t\t%10s\t%10s \n" "$SO_ContainerName" "$SO_ContainerIP" "$SO_AliveMessage" "$SO_SSHPortMessage"

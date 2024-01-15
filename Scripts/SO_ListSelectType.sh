@@ -1,7 +1,10 @@
 #!/bin/bash
 #############################################################################
-export SO_ContainerListFile="$SlientOpsHomeDirectory/SilentOps.cfg"
-
+export SO_HomeDirectory="/root/SilentOps"
+export SO_ScriptDirectory="$SO_HomeDirectory/Scripts"
+export SO_MouleDirectory="$SO_ScriptDirectory/Modules"
+export SO_ComponetDirectory="$SO_ScriptDirectory/Components"
+export SO_ContainerListFile="$SO_HomeDirectory/SilentOps.cfg"
 #############################################################################
 
 SO_SelectType="$1"

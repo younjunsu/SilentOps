@@ -8,12 +8,17 @@
 
 for SO_ContainerVar in "${SO_ConntainerListArray[@]}"
 do
-    export SO_ContainerType=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $1}'
-    export SO_ContainerName=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $2}'
-    export SO_ContainerIP=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $3}'
-    export SO_ContainerUserName=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $4}'
-    export SO_ContainerPassword=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $5}'
-    export SO_ConntainerSSHPort=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $6}'
-
-    sh "$SO_MouleDirectory"/"$SilentOpsModuleName".sh
+    export SO_ContainerType=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $1}'`
+    export SO_ContainerName=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $2}'`
+    export SO_ContainerIP=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $3}'`
+    export SO_ContainerUserName=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $4}'`
+    export SO_ContainerPassword=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $5}'`
+    export SO_ConntainerSSHPort=`grep -w "$SO_ContainerVar" "$SO_ContainerListFile" |awk '{print $6}'`
+	if [ -z "$SilentOpsModuleName" ]
+	then
+		2>/dev/null
+	elif [ -n "$SilentOpsModuleName" ]
+	then 
+		sh "$SO_MouleDirectory"/"$SilentOpsModuleName".sh
+	fi
 done

@@ -8,29 +8,29 @@ echo $option1 $option2
 
 if [ "all" = "$option2" ]
 then
-   export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#"`)
+   export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#"`)
 elif [ "tibero" = "$option2" ]
 then
     echo "tibero"
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i tibero`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i tibero`)
 elif [ "oracle" = "$option2" ]
 then
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i oracle`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i oracle`)
 elif [ "cubrid" = "$option2" ]
 then
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i cubrid`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i cubrid`)
 elif [ "postgres" = "$option2" ]
 then
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i postgres`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i postgres`)
 elif [ "mysql" = "$option2" ]
 then
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i mysql`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i mysql`)
 elif [ "maria" = "$option2" ]
 then
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i maria`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i maria`)
 elif [ "db2" = "$option2" ]
 then
-    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#" |grep -i db2`)
+    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i db2`)
 else
     exit 1
 fi

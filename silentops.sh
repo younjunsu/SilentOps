@@ -64,7 +64,7 @@ function fn_message(){
 }
 
 
-case "$option1_type" in 
+case "$option1" in 
     "help")
         # Message
         fn_message;;

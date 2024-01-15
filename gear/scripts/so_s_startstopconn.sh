@@ -18,11 +18,17 @@ function fn_stop(){
     sshpass -p '$so_docker_server_password' ssh $so_docker_server_user@$so_docker_server_ip "docker stop $option2"
 }
 
+function fn_conn(){
+    sshpass -p 'tibero' ssh root@$option2
+}
+
 case $option1 in
     "start")
         fn_start $option2;;
     "stop")
         fn_stop $option2;;
+    "conn")
+        fn_conn $option2;;
     *)
         exit 1;;
 esac

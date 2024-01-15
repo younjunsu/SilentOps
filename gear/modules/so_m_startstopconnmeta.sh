@@ -9,4 +9,4 @@ option3=$3
 option4=$4
 option5=$5
 
-sh "$so_scriptdirectory"/so_s_startstop.sh "$option1" "$option2"
+sh -x "$so_scriptdirectory"/so_s_startstopconn.sh "$option1" "$option2"

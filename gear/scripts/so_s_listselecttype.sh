@@ -3,7 +3,8 @@
 #############################################################################
 option1=$1
 option2=$2
-
+echo "$so_containerlistfile"
+echo $option1 $option2
 if [ "all" = "$option2" ]
 then
    export so_s_contlistarray=(`awk '{print $3}' $so_containerlistfile |grep -v "#"`)

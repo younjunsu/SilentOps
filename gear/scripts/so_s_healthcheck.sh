@@ -1,21 +1,38 @@
+#!/bin/bash
+#############################################################################
+#############################################################################
+option1=$1
+option2=$2
+option3=$3
 
-so_alivecheck=`timeout 0.1 ping "$so_containerip"`
-so_sshportalive=`timeout 0.1 telnet "$so_containerip" "$so_containersshport" 2>&1`
-so_sshportcheck=`echo "$so_sshportalive" |grep "escape"`
-
-
-if [ -n "$so_alivecheck" ]
-then
-    so_alivemessage="o"
-    if [ -n "$so_sshportcheck" ]
+function fn_ping(){
+    so_alive_ping=`timeout 0.1 ping "$so_cont_ip"`
+    if [ -n "$so_alive_ping" ]
     then
-        so_sshportmessage="o"
-    elif [ -z "$so_sshportcheck" ]
+        so_alive_ping_message="O"
+    elif [ -z "$so_alive_ping" ]
     then
-        so_sshportmessage="x"
+        so_alive_ping_message="X"
     fi
-elif [ -z "$so_alivecheck" ]
-then
-    so_alivemessage="x"
-    so_sshportmessage="x"
-fi
+}
+
+function fn_telnet(){
+    so_alive_sshport=`timeout 0.1 telnet "$so_cont_ip" "$so_cont_sshport" |grep "escape"`
+        
+    if [ -n "$so_alive_sshport" ]
+    then
+        so_alive_sshport_message="O"
+    elif
+    then
+        so_alive_sshport_message="X"
+    fi
+}
+
+case $option1 in
+    "ping")
+        fn_ping;;
+    "sshport")
+        fn_telnet;;
+    *)
+        exit 1;
+esac

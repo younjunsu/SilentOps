@@ -4,6 +4,8 @@
 option1=$1
 option2=$2
 option3=$3
+option4=$4
+option5=$5
 
 function fn_ping(){
     so_alive_ping=`timeout 0.1 ping "$so_cont_ip"`

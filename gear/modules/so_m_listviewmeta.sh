@@ -6,6 +6,8 @@
 option1=$1
 option2=$2
 option3=$3
+option4=$4
+option5=$5
 
 source "$so_scriptdirectory"/so_s_listselecttype.sh "$option1" "$option2"
 for so_m_container in ${so_s_contlistarray[@]}

@@ -1,5 +1,8 @@
 #!/bin/bash
 #############################################################################
+export so_docker_server_ip="bulltakbulltak.duckdns.org"
+export so_docker_server_user="devpg"
+export so_docker_server_password="rlaxogml32!"
 export so_homedirectory="/root/SilentOps"
 export so_containerlistfile="$so_homedirectory/silentops.cfg"
 export so_componetdirectory="$so_homedirectory/gear/components"
@@ -13,6 +16,10 @@ option4=$4
 option5=$5
 
 function fn_environment(){
+    export so_docker_server_ip="$so_docker_server_ip"
+    export so_docker_server_user="$so_docker_server_user"
+    export so_docker_server_password="$so_docker_server_password"
+    export so_homedirectory="/root/SilentOps"        
     export so_homedirectory="$so_homedirectory"
     export so_containerlistfile="$so_containerlistfile"
     export so_componetdirectory="$so_componetdirectory"
@@ -74,6 +81,10 @@ case "$option1" in
     "listview")
         # ListView
         sh "$so_componetdirectory"/so_c_listview.sh "$option1" "$option2";;
+    "start")
+        ;;
+    "stop")
+        ;;  
     *)
         # Message
         fn_message;;

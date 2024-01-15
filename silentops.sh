@@ -2,7 +2,7 @@
 #############################################################################
 export so_docker_server_ip="bulltakbulltak.duckdns.org"
 export so_docker_server_user="devpg"
-export so_docker_server_password='rlaxogml32\!'
+export so_docker_server_password='rlaxogml32!'
 export so_homedirectory="/root/SilentOps"
 export so_containerlistfile="$so_homedirectory/silentops.cfg"
 export so_componetdirectory="$so_homedirectory/gear/components"

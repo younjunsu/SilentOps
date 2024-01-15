@@ -79,13 +79,13 @@ case "$option1" in
         fn_environment;;
     "listview")
         # ListView
-        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;
+        sh "$so_componetdirectory"/so_c_startstopconn.sh "$option1" "$option2";;
     "start")
-        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;
+        sh "$so_componetdirectory"/so_c_startstopconn.sh "$option1" "$option2";;
     "stop")
-        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;  
+        sh "$so_componetdirectory"/so_c_startstopconn.sh "$option1" "$option2";;  
     "conn")
-        sh "$so_componetdirectory"/so_c_startstop.sh "$option1" "$option2";;  
+        sh "$so_componetdirectory"/so_c_startstopconn.sh "$option1" "$option2";;  
     *)
         # Message
         fn_message;;

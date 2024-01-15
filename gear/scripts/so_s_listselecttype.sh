@@ -3,15 +3,12 @@
 #############################################################################
 option1=$1
 option2=$2
-echo "$so_containerlistfile"
-echo $option1 $option2
 
 if [ "all" = "$option2" ]
 then
    export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#"`)
 elif [ "tibero" = "$option2" ]
 then
-    echo "tibero"
     export so_s_contlistarray=(`awk '{print $2}' $so_containerlistfile |grep -v "#" |grep -i tibero`)
 elif [ "oracle" = "$option2" ]
 then

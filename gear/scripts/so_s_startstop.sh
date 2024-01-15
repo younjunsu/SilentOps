@@ -1,7 +1,7 @@
 #!/bin/bash
 #############################################################################
 #############################################################################
-source "$so_homedirectory"/so_s_environment.sh
+source "$so_homedirectory"/gear/scripts/so_s_environment.sh
 option1=$1
 option2=$2
 option3=$3

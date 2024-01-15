@@ -16,5 +16,5 @@ do
     source "$so_scriptdirectory"/so_s_healthcheck.sh ping
     source "$so_scriptdirectory"/so_s_healthcheck.sh sshport
 
-    printf "%10s\t\t%10s\t\t%10s\t%10s \n" "$so_cont_name" "$so_cont_ip" "$so_cont_alive" "$so_cont_sshport"
+    printf "%10s\t\t%10s\t\t%10s\t%10s \n" "$so_cont_name" "$so_cont_ip" "$so_alive_ping_message" "$so_alive_sshport_message"
 done

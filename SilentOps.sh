@@ -16,7 +16,7 @@ SO_HelloMessage="  A tool that enhances user convenience in a containerized envi
 for ((i=0; i<${#SO_HelloMessage}; i++)); do
     #red=$((RANDOM % 256));green=$((RANDOM % 256));blue=$((RANDOM % 256))
     printf "\033[38;2;%d;%d;%dm\033[48;5;0m%s\033[0m" "$red" "$green" "$blue" "${SO_HelloMessage:$i:1}"
-    sleep 0.02
+    sleep 0.01
 done
 
 echo ""
@@ -24,11 +24,11 @@ echo ""
 echo "  # Controlling Containers"
 echo " ----------------------------------------------------------------------"
 echo "  [*] Container Monitor"
-echo "      $ all	# All Container "
-echo "      $ team	# Project Container"
-echo "      $ oracle	# Oracle Container" 
-echo "      $ tibero	# Tibero Container"
-echo "      $ cubrid	# Cubrid Container"
+echo "      $ sh SilentOps mon all	    # All Container "
+echo "      $ sh SilentOps mon team	    # Project Container"
+echo "      $ sh SilentOps mon oracle	# Oracle Container" 
+echo "      $ sh SilentOps mon tibero	# Tibero Container"
+echo "      $ sh SilentOps mon cubrid	# Cubrid Container"
 echo ""
 echo "  [*] Container Start and Stop"
 echo " ----------------------------------------------------------------------"
@@ -46,7 +46,7 @@ echo ""
 echo ""
 echo "  # Using SilentOps Batch Mode"
 echo " ----------------------------------------------------------------------"
-echo "      $ ./SilentOps	--batch	%mode	%type	%sec"	
-
+echo ""
+echo ""
 
 sh $SO_ComponetDirectory/SO_C_ContainerListView.sh 

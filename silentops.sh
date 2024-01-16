@@ -43,11 +43,12 @@ function fn_message(){
     echo "  # Controlling Containers"
     echo " ----------------------------------------------------------------------"
     echo "  [*] Container List View"
-    echo "      $ all	    # All Container "
-    echo "      $ team	    # Project Container"
-    echo "      $ oracle	# Oracle Container" 
-    echo "      $ tibero	# Tibero Container"
-    echo "      $ cubrid	# Cubrid Container"
+    echo "      $ all	    	# All Container "
+    echo "      $ team	    	# Project Container"
+    echo "      $ oracle" 
+    echo "      $ tibero"
+    echo "      $ cubrid"
+    echo "      $ mysql"
     echo ""
     echo "  [*] Container Start and Stop"
     echo " ----------------------------------------------------------------------"
@@ -69,7 +70,6 @@ function fn_message(){
     echo ""
 }
 
-
 case "$option1" in 
     "help")
         # Message
@@ -90,7 +90,3 @@ case "$option1" in
         # Message
         fn_message;;
 esac
-
-
-
-

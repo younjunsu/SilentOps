@@ -19,7 +19,7 @@ function fn_ping(){
 }
 
 function fn_telnet(){
-    so_alive_sshport=`timeout 0.1 telnet "$so_cont_ip" "$so_cont_sshport" |grep -i "Escape"`
+    so_alive_sshport=`timeout 0.1 telnet "$so_cont_ip" "$so_cont_sshport" 2>/dev/null |grep -i "Escape"`
         
     if [ -n "$so_alive_sshport" ]
     then

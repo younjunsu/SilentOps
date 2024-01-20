@@ -1,0 +1,44 @@
+#Type       ContainerName       IPAddress	UserName	Password	SSH(defualt 22)
+#---------------------------------------------------------------------------------------------
+team        sj1                 10.10.10.51 	root   		tibero			
+team        sj2                 10.10.10.52 	root    	tibero
+team        ss1                 10.10.10.61 	root    	tibero
+team        ss2                 10.10.10.62 	root    	tibero
+team        js1                 10.10.10.71 	root    	tibero
+team        js2                 10.10.10.72 	root    	tibero
+team        mk1                 10.10.10.81 	root    	tibero
+team        mk2                 10.10.10.82 	root    	tibero
+#---------------------------------------------------------------------------------------------
+tibero      tibero6tsc1         10.10.10.221    root    	tibero
+tibero      tibero6tsc2         10.10.10.222    root    	tibero   
+tibero      tibero7tsc1         10.10.10.21 	root    	tibero
+tibero      tibero7tsc2         10.10.10.22 	root    	tibero
+tibero      tibero6tac1         10.10.10.231    root    	tibero   
+tibero      tibero6tac2         10.10.10.232    root    	tibero   
+tibero      tibero7tac1         10.10.10.31 	root    	tibero
+tibero      tibero7tac2         10.10.10.32 	root    	tibero
+tibero      tibero         10.10.10.101 	root    	tibero
+#---------------------------------------------------------------------------------------------
+oracle      oracle11.2.0.2           10.10.10.130  	root    	tibero
+oracle      oracle12.1.0.2           10.10.10.131  	root    	tibero
+oracle      oracle12.2.0.1           10.10.10.132  	root    	tibero
+oracle      oracle18.3.0           10.10.10.133  	root    	tibero
+oracle      oracle18.4.0          10.10.10.183  	root    	tibero
+oracle      oracle19.3.0          10.10.10.183  	root    	tibero
+oracle      oracle21.3.0          10.10.10.183  	root    	tibero
+oracle      oracle23.2.0          10.10.10.183  	root    	tibero
+#---------------------------------------------------------------------------------------------
+mysql       mysql5.5            10.10.10.1  	root    	tibero
+mysql       mysql5.6            10.10.10.1  	root    	tibero
+mysql       mysql5.7            10.10.10.1  	root    	tibero
+mysql       mysql8.0            10.10.10.1  	root    	tibero
+mysql       mysql8.3            10.10.10.1  	root    	tibero
+#---------------------------------------------------------------------------------------------
+postgres    postgres14          10.10.10.1  	root    	tibero
+postgres    postgres15          10.10.10.1  	root    	tibero
+postgres    postgres16          10.10.10.1  	root    	tibero
+#---------------------------------------------------------------------------------------------
+cubrid	cubrid		10.10.10.186	root	tibero
+cubrid	cubrid_master	10.10.10.161	root	tibero
+cubrid	cubrid_slave	10.10.10.162	root	tibero
+#---------------------------------------------------------------------------------------------

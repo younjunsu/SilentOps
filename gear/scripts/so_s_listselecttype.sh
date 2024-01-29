@@ -37,6 +37,13 @@ then
 elif [ "mssql" = "$option2" ]
 then
     export so_s_contlistarray=(`cat $so_containerlistfile |grep -v "#" |grep -w "^mssql" |awk '{print $2}'`)
+elif [ "db2" = "$option2" ]
+then
+    export so_s_contlistarray=(`cat $so_containerlistfile |grep -v "#" |grep -w "^db2" |awk '{print $2}'`)
+elif [ "mariadb" = "$option2" ]
+then
+    export so_s_contlistarray=(`cat $so_containerlistfile |grep -v "#" |grep -w "^mariadb" |awk '{print $2}'`)
 else
+	echo "check list type"
     exit 1
 fi

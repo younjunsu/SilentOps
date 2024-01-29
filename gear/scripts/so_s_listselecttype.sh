@@ -34,6 +34,9 @@ then
 elif [ "team" = "$option2" ]
 then
     export so_s_contlistarray=(`cat $so_containerlistfile |grep -v "#" |grep -w "^team" |awk '{print $2}'`)
+elif [ "mssql" = "$option2" ]
+then
+    export so_s_contlistarray=(`cat $so_containerlistfile |grep -v "#" |grep -w "^mssql" |awk '{print $2}'`)
 else
     exit 1
 fi

@@ -10,12 +10,32 @@ option5=$5
 
 
 function fn_start(){
-    sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker start $option2"
-    sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker exec -u 0 $option2 /usr/sbin/sshd"
+	if [ "$option2" == "invaild_option" ]
+	then
+		so_all_start_list=(`sh "$so_homedirectory"/silentops.sh listview all |grep "X" |awk '{print $1}'`)
+		for so_all_start_container in ${so_all_start_list[@]}
+		do
+    			sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker start $so_all_start_container"
+ 	   		sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker exec -u 0 $so_all_start_container /usr/sbin/sshd"
+		done
+	else
+    		sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker start $option2"
+ 	   	sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker exec -u 0 $option2 /usr/sbin/sshd"
+	fi
 }
 
 function fn_stop(){
-    sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker stop $option2"
+        if [ "$option2" == "all" ]
+        then
+                so_all_stop_list=(`sh "$so_homedirectory"/silentops.sh listview all |grep "O" |awk '{print $1}'`)
+
+                for so_all_stop_container in ${so_all_stop_list[@]}
+                do
+    			sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker stop $so_all_stop_container"
+                done
+	else
+    		sshpass -p $so_docker_server_password ssh $so_docker_server_user@$so_docker_server_ip "docker stop $option2"
+	fi
 }
 
 function fn_conn(){

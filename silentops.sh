@@ -1,6 +1,7 @@
 #!/bin/bash
 #############################################################################
-export so_docker_server_ip="bulltakbulltak.duckdns.org"
+#export so_docker_server_ip="bulltakbulltak.duckdns.org"
+export so_docker_server_ip="192.168.41.182"
 export so_docker_server_user="`awk '{print $1}' /root/user_passwd`"
 export so_docker_server_password="`awk '{print $2}' /root/user_passwd`"
 export so_homedirectory="/root/SilentOps"
